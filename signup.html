@@ -1,0 +1,94 @@
+﻿<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <a id="brand" href="findtutor.html">MacTutor</a>
+        <a href="index.html">
+            <i class="fa fa-home" style="font-size:23px;"></i>
+        </a>
+        <a href="findtutor.html">Find Help</a>
+        <a href="helpstudent.html">Give Help</a>
+        <a href="javascript:void(0);" class="hamburger" id="hamburger">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div class="search">
+            <input type="text" placeholder="Search..">
+            <button>
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
+    <div class="container">
+        <br/>
+        <h1 class="text-center">Sign Up</h1>
+        <form>
+            <div class="form-group required">
+                <label for="usr" class="control-label">Name:</label>
+                <input type="text" class="form-control" id="usr">
+                <div id="usrfeedback" class="invalid-feedback"> </div>
+            </div>
+            <div class="form-group required">
+                <label for="pwd" class="control-label">Password:</label>
+                <input type="password" class="form-control" id="pwd">
+                <div id="pwdfeedback" class="form-control is-invalid">Password must be atleast 8 characters</div>
+            </div>
+            <div class="form-group required">
+                <label for="confirm-pwd" class="control-label">Confirm Password:</label>
+                <input type="text" class="form-control" id="confirm-pwd">
+                <div id="pwdfeedback" class="invalid-feedback"> </div>
+            </div>
+            <div class="form-group required">
+                <label for="email" class="control-label">Email:</label>
+                <input type="text" class="form-control" id="email">
+                <div id="emailfeedback" class="invalid-feedback"> </div>
+            </div>
+            <div class="form-group required">
+                <label for="program" class="control-label">Program:</label>
+                <input type="text" class="form-control" id="program">
+                <div id="programfeedback" class="invalid-feedback"> </div>
+            </div>
+            <div class="alert alert-info">
+                <h3>Becoming a tutor</h3>
+                <p>Upload the following files to become a tutor (can be completed later)</p>
+                <div class="form-group">
+                    <label for="transcript" class="control-label">Upload transcript</label>
+                    <input type="file" class="form-control-file" id="transcript">
+                    <div id="transcriptfeedback" class="invalid-feedback"> </div>
+                </div>
+                <div class="form-group">
+                    <label for="payment-info" class="control-label">Upload void check or direct deposit form</label>
+                    <input type="file" class="form-control-file" id="payment-info">
+                    <div id="paymentfeedback" class="invalid-feedback"> </div>
+                </div>
+            </div>
+            
+            <input type="button" value="Sign up" id="signup" class="btn btn-primary" />
+        </form>
+        <a class="text-center" href="index.html">Login</a>
+    </div>
+    </br>
+</body>
+<script>$("#hamburger").click(funtion => {
+        navbar = $(".navbar")[0];
+        if (navbar.className === "navbar") {
+            navbar.className += " responsive";
+        } else {
+            navbar.className = "navbar";
+        }
+    });
+
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+    </script> 
