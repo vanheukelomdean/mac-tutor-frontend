@@ -3,6 +3,11 @@
     overflow: hidden;
   }
 
+.form-group.required .control-label:after {
+    content: "*";
+    color: red;
+}
+
 #brand{
 
   font-weight: bold;
